@@ -1,9 +1,5 @@
-// check-pass
+// check-fail
 
-macro_rules! macro_rules { () => { struct S; } } // OK
+macro_rules! macro_rules { () => {} } //~ ERROR: user-defined macro may not be named `macro_rules`
 
-macro_rules! {} // OK, calls the macro defined above
-
-fn main() {
-    let s = S;
-}
+macro_rules! {} //~ ERROR: expected identifier, found `{`
