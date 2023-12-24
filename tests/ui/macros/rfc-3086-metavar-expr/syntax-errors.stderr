@@ -221,7 +221,7 @@ LL |         ${count() a b c}
    |         ^ expected expression
 ...
 LL |     extra_garbage_after_metavar!(a);
-   |     ------------------------------- in this macro invocation
+   |     -------------------------------- in this macro invocation
    |
    = note: this error originates in the macro `extra_garbage_after_metavar` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -232,7 +232,7 @@ LL |     ( $( $i:ident ),* ) => { ${ index(IDX) } };
    |                              ^ expected expression
 ...
 LL |     metavar_depth_is_not_literal!(a);
-   |     -------------------------------- in this macro invocation
+   |     --------------------------------- in this macro invocation
    |
    = note: this error originates in the macro `metavar_depth_is_not_literal` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -243,7 +243,7 @@ LL |     ( $( $i:ident ),* ) => { ${ ignore() } };
    |                              ^ expected expression
 ...
 LL |     metavar_token_without_ident!(a);
-   |     ------------------------------- in this macro invocation
+   |     -------------------------------- in this macro invocation
    |
    = note: this error originates in the macro `metavar_token_without_ident` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -254,7 +254,7 @@ LL |     ( $( $i:ident ),* ) => { ${ index(1u32) } };
    |                              ^ expected expression
 ...
 LL |     metavar_with_literal_suffix!(a);
-   |     ------------------------------- in this macro invocation
+   |     -------------------------------- in this macro invocation
    |
    = note: this error originates in the macro `metavar_with_literal_suffix` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -265,7 +265,7 @@ LL |     ( $( $i:ident ),* ) => { ${ count{i} } };
    |                              ^ expected expression
 ...
 LL |     metavar_without_parens!(a);
-   |     -------------------------- in this macro invocation
+   |     --------------------------- in this macro invocation
    |
    = note: this error originates in the macro `metavar_without_parens` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -276,7 +276,7 @@ LL |     ( $( $i:ident ),* ) => { ${ {} } };
    |                              ^ expected expression
 ...
 LL |     open_brackets_without_tokens!(a);
-   |     -------------------------------- in this macro invocation
+   |     --------------------------------- in this macro invocation
    |
    = note: this error originates in the macro `open_brackets_without_tokens` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -287,7 +287,7 @@ LL |         ${count(foo)}
    |         ^ expected expression
 ...
 LL |     unknown_count_ident!(a);
-   |     ----------------------- in this macro invocation
+   |     ------------------------ in this macro invocation
    |
    = note: this error originates in the macro `unknown_count_ident` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -298,7 +298,7 @@ LL |         ${ignore(bar)}
    |         ^ expected expression
 ...
 LL |     unknown_ignore_ident!(a);
-   |     ------------------------ in this macro invocation
+   |     ------------------------- in this macro invocation
    |
    = note: this error originates in the macro `unknown_ignore_ident` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -309,7 +309,7 @@ LL |     ( $( $i:ident ),* ) => { ${ aaaaaaaaaaaaaa(i) } };
    |                              ^ expected expression
 ...
 LL |     unknown_metavar!(a);
-   |     ------------------- in this macro invocation
+   |     -------------------- in this macro invocation
    |
    = note: this error originates in the macro `unknown_metavar` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -320,7 +320,7 @@ LL |     ( $( $i:ident ),* ) => { count(i) };
    |                                    ^ not found in this scope
 ...
 LL |     no_curly__no_rhs_dollar__round!(a, b, c);
-   |     ---------------------------------------- in this macro invocation
+   |     ----------------------------------------- in this macro invocation
    |
    = note: this error originates in the macro `no_curly__no_rhs_dollar__round` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -331,7 +331,7 @@ LL |     ( $i:ident ) => { count(i) };
    |                             ^ not found in this scope
 ...
 LL |     no_curly__no_rhs_dollar__no_round!(a);
-   |     ------------------------------------- in this macro invocation
+   |     -------------------------------------- in this macro invocation
    |
    = note: this error originates in the macro `no_curly__no_rhs_dollar__no_round` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -348,7 +348,7 @@ LL |     ( $( $i:ident ),* ) => { count(i) };
    |                              ^^^^^ not found in this scope
 ...
 LL |     no_curly__no_rhs_dollar__round!(a, b, c);
-   |     ---------------------------------------- in this macro invocation
+   |     ----------------------------------------- in this macro invocation
    |
    = note: this error originates in the macro `no_curly__no_rhs_dollar__round` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -359,7 +359,7 @@ LL |     ( $i:ident ) => { count(i) };
    |                       ^^^^^ not found in this scope
 ...
 LL |     no_curly__no_rhs_dollar__no_round!(a);
-   |     ------------------------------------- in this macro invocation
+   |     -------------------------------------- in this macro invocation
    |
    = note: this error originates in the macro `no_curly__no_rhs_dollar__no_round` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -370,7 +370,7 @@ LL |     ( $i:ident ) => { count($i) };
    |                       ^^^^^ not found in this scope
 ...
 LL |     no_curly__rhs_dollar__no_round!(a);
-   |     ---------------------------------- in this macro invocation
+   |     ----------------------------------- in this macro invocation
    |
    = note: this error originates in the macro `no_curly__rhs_dollar__no_round` (in Nightly builds, run with -Z macro-backtrace for more info)
 

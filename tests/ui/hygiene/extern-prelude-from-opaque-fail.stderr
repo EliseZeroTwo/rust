@@ -11,7 +11,7 @@ LL |         use my_core;
    |             ^^^^^^^ no `my_core` in the root
 ...
 LL | a!();
-   | ---- in this macro invocation
+   | ----- in this macro invocation
    |
    = note: this error originates in the macro `a` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -22,7 +22,7 @@ LL |         fn f() { my_core::mem::drop(0); }
    |                  ^^^^^^^ use of undeclared crate or module `my_core`
 ...
 LL | a!();
-   | ---- in this macro invocation
+   | ----- in this macro invocation
    |
    = help: consider importing this module:
            my_core::mem

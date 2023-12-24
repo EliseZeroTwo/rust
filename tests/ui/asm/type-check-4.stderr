@@ -4,7 +4,7 @@ error[E0506]: cannot assign to `a` because it is borrowed
 LL |         let p = &a;
    |                 -- `a` is borrowed here
 LL |         asm!("{}", out(reg) a);
-   |         ^^^^^^^^^^^^^^^^^^^^^^ `a` is assigned to here but it was already borrowed
+   |         ^^^^^^^^^^^^^^^^^^^^^^^ `a` is assigned to here but it was already borrowed
 LL |
 LL |         println!("{}", p);
    |                        - borrow later used here

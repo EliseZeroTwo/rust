@@ -11,7 +11,7 @@ LL |     ( $( $($t:ident),* );* ) => { ${count($t,)} }
    |                                   ^ expected expression
 ...
 LL |     foo!(a, a; b, b);
-   |     ---------------- in this macro invocation
+   |     ----------------- in this macro invocation
    |
    = note: this error originates in the macro `foo` (in Nightly builds, run with -Z macro-backtrace for more info)
 

@@ -7,7 +7,7 @@ LL |         _
   ::: $DIR/main.rs:5:5
    |
 LL |     underscore!();
-   |     ------------- in this macro invocation
+   |     -------------- in this macro invocation
    |
    = note: this error originates in the macro `underscore` (in Nightly builds, run with -Z macro-backtrace for more info)
 

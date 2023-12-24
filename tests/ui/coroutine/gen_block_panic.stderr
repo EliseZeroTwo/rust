@@ -2,7 +2,7 @@ warning: unreachable statement
   --> $DIR/gen_block_panic.rs:10:9
    |
 LL |         panic!("foo");
-   |         ------------- any code following this expression is unreachable
+   |         -------------- any code following this expression is unreachable
 LL |         yield 69;
    |         ^^^^^^^^^ unreachable statement
    |

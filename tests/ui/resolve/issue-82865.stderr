@@ -13,7 +13,7 @@ LL |     Box::z
    |          ^ function or associated item not found in `Box<_, _>`
 ...
 LL |     mac!();
-   |     ------ in this macro invocation
+   |     ------- in this macro invocation
    |
 note: if you're trying to build a new `Box<_, _>` consider using one of the following associated functions:
       Box::<T>::new

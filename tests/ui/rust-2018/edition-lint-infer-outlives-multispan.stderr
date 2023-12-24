@@ -826,7 +826,7 @@ LL |             struct Inline<'a, $($name: 'a,)+>(&'a ($($name,)+));
    |                                      ^^^^ help: remove these bounds
 ...
 LL |     m!(T0 T1 T2 T3 T4 T5 T6 T7 T8 T9 T10 T11 T12 T13 T14 T15);
-   |     --------------------------------------------------------- in this macro invocation
+   |     ---------------------------------------------------------- in this macro invocation
    |
    = note: this error originates in the macro `m` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -837,7 +837,7 @@ LL |             struct FullWhere<'a, $($name,)+>(&'a ($($name,)+)) where $($nam
    |                                                                ^^^^^^^^^^^^^^^^^^ help: remove these bounds
 ...
 LL |     m!(T0 T1 T2 T3 T4 T5 T6 T7 T8 T9 T10 T11 T12 T13 T14 T15);
-   |     --------------------------------------------------------- in this macro invocation
+   |     ---------------------------------------------------------- in this macro invocation
    |
    = note: this error originates in the macro `m` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -848,7 +848,7 @@ LL |             struct PartialWhere<'a, $($name,)+>(&'a ($($name,)+)) where ():
    |                                                                                      ^^^^^^^^^ help: remove these bounds
 ...
 LL |     m!(T0 T1 T2 T3 T4 T5 T6 T7 T8 T9 T10 T11 T12 T13 T14 T15);
-   |     --------------------------------------------------------- in this macro invocation
+   |     ---------------------------------------------------------- in this macro invocation
    |
    = note: this error originates in the macro `m` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -861,7 +861,7 @@ LL |                 $($name: 'a, $name: 'a, )+;
    |                   ^^^^^^^^^  ^^^^^^^^^
 ...
 LL |     m!(T0 T1 T2 T3 T4 T5 T6 T7 T8 T9 T10 T11 T12 T13 T14 T15);
-   |     --------------------------------------------------------- in this macro invocation
+   |     ---------------------------------------------------------- in this macro invocation
    |
    = note: this error originates in the macro `m` (in Nightly builds, run with -Z macro-backtrace for more info)
 help: remove these bounds

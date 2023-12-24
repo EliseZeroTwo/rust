@@ -23,7 +23,7 @@ LL |         x(123);
    |         arguments to this function are incorrect
 ...
 LL |     bla!();
-   |     ------ in this macro invocation
+   |     ------- in this macro invocation
    |
 note: function defined here
   --> $DIR/suggest-ref-macro.rs:11:4

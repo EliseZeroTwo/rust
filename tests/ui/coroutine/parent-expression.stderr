@@ -11,7 +11,7 @@ LL | |         // NOT OK: MIR borrowck thinks that this is used after the yield,
 ...  |
 LL | |         };
 LL | |     );
-   | |_____- in this macro invocation
+   | |______- in this macro invocation
    |
    = help: within `{coroutine@$DIR/parent-expression.rs:17:21: 17:28}`, the trait `Send` is not implemented for `derived_drop::Client`
 note: coroutine is not `Send` as this value is used across a yield
@@ -30,7 +30,7 @@ LL | |         // NOT OK: MIR borrowck thinks that this is used after the yield,
 ...  |
 LL | |         };
 LL | |     );
-   | |_____- in this macro invocation
+   | |______- in this macro invocation
 note: required by a bound in `assert_send`
   --> $DIR/parent-expression.rs:40:19
    |
@@ -51,7 +51,7 @@ LL | |         // NOT OK: MIR borrowck thinks that this is used after the yield,
 ...  |
 LL | |         };
 LL | |     );
-   | |_____- in this macro invocation
+   | |______- in this macro invocation
    |
    = help: within `{coroutine@$DIR/parent-expression.rs:17:21: 17:28}`, the trait `Send` is not implemented for `significant_drop::Client`
 note: coroutine is not `Send` as this value is used across a yield
@@ -70,7 +70,7 @@ LL | |         // NOT OK: MIR borrowck thinks that this is used after the yield,
 ...  |
 LL | |         };
 LL | |     );
-   | |_____- in this macro invocation
+   | |______- in this macro invocation
 note: required by a bound in `assert_send`
   --> $DIR/parent-expression.rs:40:19
    |
@@ -91,7 +91,7 @@ LL | |         // NOT OK: MIR borrowck thinks that this is used after the yield,
 ...  |
 LL | |         };
 LL | |     );
-   | |_____- in this macro invocation
+   | |______- in this macro invocation
    |
    = help: within `{coroutine@$DIR/parent-expression.rs:17:21: 17:28}`, the trait `Send` is not implemented for `insignificant_dtor::Client`
 note: coroutine is not `Send` as this value is used across a yield
@@ -110,7 +110,7 @@ LL | |         // NOT OK: MIR borrowck thinks that this is used after the yield,
 ...  |
 LL | |         };
 LL | |     );
-   | |_____- in this macro invocation
+   | |______- in this macro invocation
 note: required by a bound in `assert_send`
   --> $DIR/parent-expression.rs:40:19
    |

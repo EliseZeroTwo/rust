@@ -1066,11 +1066,10 @@ impl SourceMap {
     /// ```ignore (illustrative)
     /// //       v output
     ///    mac!();
-    /// // ^^^^^^ input
+    /// // ^^^^^^^ input
     /// ```
     pub fn mac_call_stmt_semi_span(&self, mac_call: Span) -> Option<Span> {
-        let span = self.span_extend_while(mac_call, char::is_whitespace).ok()?;
-        let span = span.shrink_to_hi().with_hi(BytePos(span.hi().0.checked_add(1)?));
+        let span = mac_call.with_lo(BytePos(mac_call.hi().0.checked_sub(1)?));
         if self.span_to_snippet(span).as_deref() != Ok(";") {
             return None;
         }

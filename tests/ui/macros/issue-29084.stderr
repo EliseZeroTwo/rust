@@ -7,7 +7,7 @@ LL |         bar(&mut $d);
    |         arguments to this function are incorrect
 ...
 LL |     foo!(0u8);
-   |     --------- in this macro invocation
+   |     ---------- in this macro invocation
    |
 note: function defined here
   --> $DIR/issue-29084.rs:3:12
@@ -16,7 +16,7 @@ LL |         fn bar(d: u8) { }
    |            ^^^ -----
 ...
 LL |     foo!(0u8);
-   |     --------- in this macro invocation
+   |     ---------- in this macro invocation
    = note: this error originates in the macro `foo` (in Nightly builds, run with -Z macro-backtrace for more info)
 
 error: aborting due to 1 previous error

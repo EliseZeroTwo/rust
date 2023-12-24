@@ -5,7 +5,7 @@ LL |     fn g<$a, 'a>() {}
    |              ^^ already used
 ...
 LL | m!('a);
-   | ------
+   | -------
    | |  |
    | |  first use of `'a`
    | in this macro invocation
@@ -19,7 +19,7 @@ LL |     fn h<$a, 'a>() {}
    |              ^^ already used
 ...
 LL | n!('a);
-   | ------
+   | -------
    | |  |
    | |  first use of `'a`
    | in this macro invocation

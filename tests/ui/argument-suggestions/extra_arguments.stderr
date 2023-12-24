@@ -255,7 +255,7 @@ LL |         empty($x, 1);
    |         ^^^^^     - unexpected argument of type `{integer}`
 ...
 LL |   foo!(1, ~);
-   |   ----------
+   |   -----------
    |   |    |
    |   |    unexpected argument of type `{integer}`
    |   in this macro invocation
@@ -274,7 +274,7 @@ LL |         empty(1, $y);
    |         ^^^^^ - unexpected argument of type `{integer}`
 ...
 LL |   foo!(~, 1);
-   |   ----------
+   |   -----------
    |   |       |
    |   |       unexpected argument of type `{integer}`
    |   in this macro invocation
@@ -293,7 +293,7 @@ LL |         empty($x, $y);
    |         ^^^^^
 ...
 LL |   foo!(1, 1);
-   |   ----------
+   |   -----------
    |   |    |  |
    |   |    |  unexpected argument of type `{integer}`
    |   |    unexpected argument of type `{integer}`

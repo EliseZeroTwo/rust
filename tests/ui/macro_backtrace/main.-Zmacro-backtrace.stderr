@@ -8,7 +8,7 @@ LL | | }
    | |_- in this expansion of `pong!`
 ...
 LL |       pong!();
-   |       ------- in this macro invocation
+   |       -------- in this macro invocation
 
 error: expected one of `!`, `.`, `::`, `;`, `?`, `{`, `}`, or an operator, found `error`
   --> $DIR/main.rs:10:20
@@ -20,7 +20,7 @@ LL | | }
    | |_- in this expansion of `pong!` (#2)
 ...
 LL |       ping!();
-   |       ------- in this macro invocation (#1)
+   |       -------- in this macro invocation (#1)
    |
   ::: $DIR/auxiliary/ping.rs:5:1
    |
@@ -28,7 +28,7 @@ LL |   macro_rules! ping {
    |   ----------------- in this expansion of `ping!` (#1)
 LL |       () => {
 LL |           pong!();
-   |           ------- in this macro invocation (#2)
+   |           -------- in this macro invocation (#2)
 
 error: expected one of `!`, `.`, `::`, `;`, `?`, `{`, `}`, or an operator, found `error`
   --> $DIR/main.rs:10:20
@@ -40,7 +40,7 @@ LL | | }
    | |_- in this expansion of `pong!` (#5)
 ...
 LL |       deep!();
-   |       ------- in this macro invocation (#1)
+   |       -------- in this macro invocation (#1)
    |
   ::: $DIR/auxiliary/ping.rs:5:1
    |
@@ -48,25 +48,25 @@ LL |   macro_rules! ping {
    |   ----------------- in this expansion of `ping!` (#4)
 LL |       () => {
 LL |           pong!();
-   |           ------- in this macro invocation (#5)
+   |           -------- in this macro invocation (#5)
 ...
 LL |   macro_rules! deep {
    |   ----------------- in this expansion of `deep!` (#1)
 LL |       () => {
 LL |           foo!();
-   |           ------ in this macro invocation (#2)
+   |           ------- in this macro invocation (#2)
 ...
 LL |   macro_rules! foo {
    |   ---------------- in this expansion of `foo!` (#2)
 LL |       () => {
 LL |           bar!();
-   |           ------ in this macro invocation (#3)
+   |           ------- in this macro invocation (#3)
 ...
 LL |   macro_rules! bar {
    |   ---------------- in this expansion of `bar!` (#3)
 LL |       () => {
 LL |           ping!();
-   |           ------- in this macro invocation (#4)
+   |           -------- in this macro invocation (#4)
 
 error: aborting due to 3 previous errors
 

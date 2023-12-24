@@ -8,7 +8,7 @@ LL |         cfg_res = 5;
    |         ----------- binding initialized here in some conditions
 ...
 LL |     assert_eq!(cfg_res, 5);
-   |     ^^^^^^^^^^^^^^^^^^^^^^ `cfg_res` used here but it is possibly-uninitialized
+   |     ^^^^^^^^^^^^^^^^^^^^^^^ `cfg_res` used here but it is possibly-uninitialized
    |
    = note: this error originates in the macro `assert_eq` (in Nightly builds, run with -Z macro-backtrace for more info)
 

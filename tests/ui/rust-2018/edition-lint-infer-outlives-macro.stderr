@@ -23,7 +23,7 @@ LL |             struct Foo<'a, 'b: 'a>(&'a &'b ());
    |                              ^^^^ help: remove this bound
 ...
 LL |     m!('b: 'a);
-   |     ---------- in this macro invocation
+   |     ----------- in this macro invocation
    |
    = note: this error originates in the macro `m` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -34,7 +34,7 @@ LL |             struct Bar<'a, 'b>(&'a &'b ()) where 'b: 'a;
    |                                            ^^^^^^^^^^^^ help: remove this bound
 ...
 LL |     m!('b: 'a);
-   |     ---------- in this macro invocation
+   |     ----------- in this macro invocation
    |
    = note: this error originates in the macro `m` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -45,7 +45,7 @@ LL |             struct Baz<'a, 'b>(&'a &'b ()) where (): Sized, 'b: 'a;
    |                                                             ^^^^^^ help: remove this bound
 ...
 LL |     m!('b: 'a);
-   |     ---------- in this macro invocation
+   |     ----------- in this macro invocation
    |
    = note: this error originates in the macro `m` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -56,7 +56,7 @@ LL |             struct Foo<'a, $b: 'a>(&'a &$b ());
    |                              ^^^^ help: remove this bound
 ...
 LL |     m!('b: 'a);
-   |     ---------- in this macro invocation
+   |     ----------- in this macro invocation
    |
    = note: this error originates in the macro `m` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -67,7 +67,7 @@ LL |             struct Bar<'a, $b>(&'a &$b ()) where $b: 'a;
    |                                            ^^^^^^^^^^^^ help: remove this bound
 ...
 LL |     m!('b: 'a);
-   |     ---------- in this macro invocation
+   |     ----------- in this macro invocation
    |
    = note: this error originates in the macro `m` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -78,7 +78,7 @@ LL |             struct Baz<'a, $b>(&'a &$b ()) where (): Sized, $b: 'a;
    |                                                             ^^^^^^ help: remove this bound
 ...
 LL |     m!('b: 'a);
-   |     ---------- in this macro invocation
+   |     ----------- in this macro invocation
    |
    = note: this error originates in the macro `m` (in Nightly builds, run with -Z macro-backtrace for more info)
 

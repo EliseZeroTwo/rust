@@ -23,7 +23,7 @@ LL |         let s = CString::new("some text").unwrap().as_ptr();
    |                 this `CString` is deallocated at the end of the statement, bind it to a variable to extend its lifetime
 ...
 LL |     mymacro!();
-   |     ---------- in this macro invocation
+   |     ----------- in this macro invocation
    |
    = note: pointers do not have a lifetime; when calling `as_ptr` the `CString` will be deallocated at the end of the statement because nothing is referencing it as far as the type system is concerned
    = help: for more information, see https://doc.rust-lang.org/reference/destructors.html

@@ -73,7 +73,7 @@ LL | macro_rules! unsafe_macro { () => (unsf()) }
    |                                    ^^^^^^ call to unsafe function
 ...
 LL |     unsafe_macro!();
-   |     --------------- in this macro invocation
+   |     ---------------- in this macro invocation
    |
    = note: consult the function's documentation for information on how to avoid undefined behavior
 note: an unsafe function restricts its caller, but its body is safe by default
@@ -90,7 +90,7 @@ LL | macro_rules! unsafe_macro { () => (unsf()) }
    |                                    ^^^^^^ call to unsafe function
 ...
 LL |     unsafe_macro!();
-   |     --------------- in this macro invocation
+   |     ---------------- in this macro invocation
    |
    = note: consult the function's documentation for information on how to avoid undefined behavior
    = note: this error originates in the macro `unsafe_macro` (in Nightly builds, run with -Z macro-backtrace for more info)

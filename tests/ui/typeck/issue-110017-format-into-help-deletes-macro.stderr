@@ -30,7 +30,7 @@ error[E0308]: mismatched types
   --> $DIR/issue-110017-format-into-help-deletes-macro.rs:41:2
    |
 LL |  entire_fn_outer!();
-   |  ^^^^^^^^^^^^^^^^^^ expected `Box<dyn Error>`, found `String`
+   |  ^^^^^^^^^^^^^^^^^^^ expected `Box<dyn Error>`, found `String`
    |
    = note: expected struct `Box<dyn std::error::Error>`
               found struct `String`

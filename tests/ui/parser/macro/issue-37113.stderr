@@ -7,7 +7,7 @@ LL |             $( $t, )*
    |                ^^ expected identifier
 ...
 LL |     test_macro!(String,);
-   |     -------------------- in this macro invocation
+   |     --------------------- in this macro invocation
    |
    = help: enum variants can be `Variant`, `Variant = <integer>`, `Variant(Type, ..., TypeN)` or `Variant { fields: Types }`
    = note: this error originates in the macro `test_macro` (in Nightly builds, run with -Z macro-backtrace for more info)

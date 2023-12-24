@@ -7,7 +7,7 @@ LL |                   $arr.len() * size_of($arr[0]));
    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `u64`, found `usize`
 ...
 LL |     write!(hello);
-   |     ------------- in this macro invocation
+   |     -------------- in this macro invocation
    |
 note: function defined here
   --> $DIR/issue-26480.rs:2:8
@@ -27,7 +27,7 @@ LL |     ($x:expr) => ($x as ())
    |                   ^^^^^^^^ an `as` expression can only be used to convert between primitive types or to coerce to a specific trait object
 ...
 LL |     cast!(2);
-   |     -------- in this macro invocation
+   |     --------- in this macro invocation
    |
    = note: this error originates in the macro `cast` (in Nightly builds, run with -Z macro-backtrace for more info)
 

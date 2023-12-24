@@ -11,7 +11,7 @@ LL |         $key.signum();
    |              ^^^^^^
 ...
 LL |     cbor_map! { #[cfg(test)] 4};
-   |     --------------------------- in this macro invocation
+   |     ---------------------------- in this macro invocation
    |
    = note: this error originates in the macro `cbor_map` (in Nightly builds, run with -Z macro-backtrace for more info)
 help: you must specify a concrete type for this numeric value, like `i32`

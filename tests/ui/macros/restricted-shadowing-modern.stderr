@@ -5,7 +5,7 @@ LL |                 m!();
    |                 ^ ambiguous name
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
    |
    = note: ambiguous because of a conflict between a macro-expanded name and a less macro-expanded name from outer scope during import or macro resolution
 note: `m` could refer to the macro defined here
@@ -15,7 +15,7 @@ LL |         macro m() { Right }
    |         ^^^^^^^^^^^^^^^^^^^
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
 note: `m` could also refer to the macro defined here
   --> $DIR/restricted-shadowing-modern.rs:99:9
    |
@@ -23,7 +23,7 @@ LL |         macro m() {}
    |         ^^^^^^^^^^^^
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
    = note: this error originates in the macro `gen_gen_inner_invoc` which comes from the expansion of the macro `include` (in Nightly builds, run with -Z macro-backtrace for more info)
 
 error[E0659]: `m` is ambiguous
@@ -33,7 +33,7 @@ LL |             macro gen_invoc() { m!() }
    |                                 ^ ambiguous name
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
    |
    = note: ambiguous because of a conflict between a macro-expanded name and a less macro-expanded name from outer scope during import or macro resolution
 note: `m` could refer to the macro defined here
@@ -43,7 +43,7 @@ LL |         macro m() { Right }
    |         ^^^^^^^^^^^^^^^^^^^
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
 note: `m` could also refer to the macro defined here
   --> $DIR/restricted-shadowing-modern.rs:143:9
    |
@@ -51,7 +51,7 @@ LL |         macro m() {}
    |         ^^^^^^^^^^^^
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
    = note: this error originates in the macro `gen_invoc` which comes from the expansion of the macro `include` (in Nightly builds, run with -Z macro-backtrace for more info)
 
 error[E0659]: `m` is ambiguous
@@ -61,7 +61,7 @@ LL |             m!();
    |             ^ ambiguous name
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
    |
    = note: ambiguous because of a conflict between a macro-expanded name and a less macro-expanded name from outer scope during import or macro resolution
 note: `m` could refer to the macro defined here
@@ -71,7 +71,7 @@ LL |         macro m() { Right }
    |         ^^^^^^^^^^^^^^^^^^^
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
 note: `m` could also refer to the macro defined here
   --> $DIR/restricted-shadowing-modern.rs:153:9
    |
@@ -79,7 +79,7 @@ LL |         macro m() {}
    |         ^^^^^^^^^^^^
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
    = note: this error originates in the macro `include` (in Nightly builds, run with -Z macro-backtrace for more info)
 
 error[E0659]: `m` is ambiguous
@@ -89,7 +89,7 @@ LL |             m!();
    |             ^ ambiguous name
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
    |
    = note: ambiguous because of a conflict between a macro-expanded name and a less macro-expanded name from outer scope during import or macro resolution
 note: `m` could refer to the macro defined here
@@ -99,7 +99,7 @@ LL |         macro m() { Right }
    |         ^^^^^^^^^^^^^^^^^^^
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
 note: `m` could also refer to the macro defined here
   --> $DIR/restricted-shadowing-modern.rs:87:9
    |
@@ -107,7 +107,7 @@ LL |         macro m() { Wrong }
    |         ^^^^^^^^^^^^^^^^^^^
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
    = note: this error originates in the macro `include` (in Nightly builds, run with -Z macro-backtrace for more info)
 
 error[E0659]: `m` is ambiguous
@@ -117,7 +117,7 @@ LL |                 m!();
    |                 ^ ambiguous name
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
    |
    = note: ambiguous because of a conflict between a macro-expanded name and a less macro-expanded name from outer scope during import or macro resolution
 note: `m` could refer to the macro defined here
@@ -127,7 +127,7 @@ LL |         macro m() { Right }
    |         ^^^^^^^^^^^^^^^^^^^
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
 note: `m` could also refer to the macro defined here
   --> $DIR/restricted-shadowing-modern.rs:87:9
    |
@@ -135,7 +135,7 @@ LL |         macro m() { Wrong }
    |         ^^^^^^^^^^^^^^^^^^^
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
    = note: this error originates in the macro `gen_gen_inner_invoc` which comes from the expansion of the macro `include` (in Nightly builds, run with -Z macro-backtrace for more info)
 
 error[E0659]: `m` is ambiguous
@@ -145,7 +145,7 @@ LL |             macro gen_invoc() { m!() }
    |                                 ^ ambiguous name
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
    |
    = note: ambiguous because of a conflict between a macro-expanded name and a less macro-expanded name from outer scope during import or macro resolution
 note: `m` could refer to the macro defined here
@@ -155,7 +155,7 @@ LL |         macro m() { Right }
    |         ^^^^^^^^^^^^^^^^^^^
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
 note: `m` could also refer to the macro defined here
   --> $DIR/restricted-shadowing-modern.rs:87:9
    |
@@ -163,7 +163,7 @@ LL |         macro m() { Wrong }
    |         ^^^^^^^^^^^^^^^^^^^
 ...
 LL | include!();
-   | ---------- in this macro invocation
+   | ----------- in this macro invocation
    = note: this error originates in the macro `gen_invoc` which comes from the expansion of the macro `include` (in Nightly builds, run with -Z macro-backtrace for more info)
 
 error: aborting due to 6 previous errors

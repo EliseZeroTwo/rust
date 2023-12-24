@@ -2,7 +2,7 @@ error[E0560]: struct `Crate` has no field named `fiel`
   --> $DIR/dont-suggest-hygienic-fields.rs:44:34
    |
 LL | environment!();
-   | -------------- in this macro invocation
+   | --------------- in this macro invocation
 ...
 LL |     const CRATE: Crate = Crate { fiel: () };
    |                                  ^^^^ unknown field

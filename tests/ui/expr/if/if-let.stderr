@@ -7,7 +7,7 @@ LL |               if let $p = $e $b
 LL | /     foo!(a, 1, {
 LL | |         println!("irrefutable pattern");
 LL | |     });
-   | |______- in this macro invocation
+   | |_______- in this macro invocation
    |
    = note: this pattern will always match, so the `if let` is useless
    = help: consider replacing the `if let` with a `let`
@@ -23,7 +23,7 @@ LL |               if let $p = $e $b
 LL | /     bar!(a, 1, {
 LL | |         println!("irrefutable pattern");
 LL | |     });
-   | |______- in this macro invocation
+   | |_______- in this macro invocation
    |
    = note: this pattern will always match, so the `if let` is useless
    = help: consider replacing the `if let` with a `let`

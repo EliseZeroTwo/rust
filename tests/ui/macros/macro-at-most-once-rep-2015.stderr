@@ -44,7 +44,7 @@ LL | macro_rules! barplus {
    | -------------------- when calling this macro
 ...
 LL |     barplus!();
-   |     ^^^^^^^^^^ missing tokens in macro arguments
+   |     ^^^^^^^^^^^ missing tokens in macro arguments
    |
 note: while trying to match `+`
   --> $DIR/macro-at-most-once-rep-2015.rs:15:11
@@ -104,7 +104,7 @@ LL | macro_rules! barstar {
    | -------------------- when calling this macro
 ...
 LL |     barstar!();
-   |     ^^^^^^^^^^ missing tokens in macro arguments
+   |     ^^^^^^^^^^^ missing tokens in macro arguments
    |
 note: while trying to match `*`
   --> $DIR/macro-at-most-once-rep-2015.rs:19:11

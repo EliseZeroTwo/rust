@@ -11,7 +11,7 @@ LL |         let $var = $struct.$var;
    |             ^^^^
 ...
 LL |     make_var!(s, var);
-   |     ----------------- in this macro invocation
+   |     ------------------ in this macro invocation
 note: the lint level is defined here
   --> $DIR/issue-117284-arg-in-macro.rs:1:9
    |

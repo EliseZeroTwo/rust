@@ -44,7 +44,7 @@ LL | macro_rules! construct { ($x:ident) => { $x"str" } }
    |                                            ^^^^^ expected one of 8 possible tokens
 ...
 LL |     construct!(c);
-   |     ------------- in this macro invocation
+   |     -------------- in this macro invocation
    |
    = note: this error originates in the macro `construct` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -55,7 +55,7 @@ LL | macro_rules! contain { () => { c"str" } }
    |                                 ^^^^^ expected one of 8 possible tokens
 ...
 LL |     contain!();
-   |     ---------- in this macro invocation
+   |     ----------- in this macro invocation
    |
    = note: you may be trying to write a c-string literal
    = note: c-string literals require Rust 2021 or later

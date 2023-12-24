@@ -15,7 +15,7 @@ LL | |     }
    | |_____^
 ...
 LL |   define_exported!();
-   |   ------------------ in this macro invocation
+   |   ------------------- in this macro invocation
    = note: `#[deny(macro_expanded_macro_exports_accessed_by_absolute_paths)]` on by default
    = note: this error originates in the macro `define_exported` (in Nightly builds, run with -Z macro-backtrace for more info)
 
@@ -36,7 +36,7 @@ LL | |     }
    | |_____^
 ...
 LL |   define_exported!();
-   |   ------------------ in this macro invocation
+   |   ------------------- in this macro invocation
    = note: this error originates in the macro `define_exported` (in Nightly builds, run with -Z macro-backtrace for more info)
 
 error: aborting due to 2 previous errors

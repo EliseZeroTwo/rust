@@ -20,7 +20,7 @@ LL |         fn f<'b, 'c, $a: 'b, 'a: 'c>(t1: &$a(), t2: &'a ()) -> (&'b (), &'c
    |                              ^^ this lifetime...     -- ...is used only here
 ...
 LL |     m!('a);
-   |     ------ in this macro invocation
+   |     ------- in this macro invocation
    |
    = note: this error originates in the macro `m` (in Nightly builds, run with -Z macro-backtrace for more info)
 

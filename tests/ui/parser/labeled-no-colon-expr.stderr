@@ -74,7 +74,7 @@ LL |             'l5 $b;
    |             the `block` fragment is within this context
 ...
 LL |     m!({});
-   |     ------ in this macro invocation
+   |     ------- in this macro invocation
    |
    = note: this error originates in the macro `m` (in Nightly builds, run with -Z macro-backtrace for more info)
 help: wrap this in another block

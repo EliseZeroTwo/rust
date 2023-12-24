@@ -10,7 +10,7 @@ LL |     n!(a $nt_item b);
    |          ^^^^^^^^ no rules expected this token in macro call
 ...
 LL | complex_nonterminal!(enum E {});
-   | ------------------------------- in this macro invocation
+   | -------------------------------- in this macro invocation
    |
 note: while trying to match `enum E {}`
   --> $DIR/nonterminal-matching.rs:15:15
@@ -19,7 +19,7 @@ LL |     macro n(a $nt_item b) {
    |               ^^^^^^^^
 ...
 LL | complex_nonterminal!(enum E {});
-   | ------------------------------- in this macro invocation
+   | -------------------------------- in this macro invocation
    = note: captured metavariables except for `:tt`, `:ident` and `:lifetime` cannot be compared to other tokens
    = note: see <https://doc.rust-lang.org/nightly/reference/macros-by-example.html#forwarding-a-matched-fragment> for more information
    = help: try using `:tt` instead in the macro definition

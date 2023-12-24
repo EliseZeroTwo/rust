@@ -14,7 +14,7 @@ error: this is a user specified error
   --> $DIR/naked-functions.rs:209:5
    |
 LL |     compile_error!("this is a user specified error");
-   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 error: asm template must be a string literal
   --> $DIR/naked-functions.rs:216:10
@@ -111,7 +111,7 @@ LL | |
 ...  |
 LL | |          sym G,
 LL | |     );
-   | |_____^
+   | |______^
    |
 help: consider specifying that the asm block is responsible for returning from the function
    |
@@ -145,7 +145,7 @@ error[E0787]: asm in naked functions must use `noreturn` option
   --> $DIR/naked-functions.rs:84:5
    |
 LL |     asm!("");
-   |     ^^^^^^^^
+   |     ^^^^^^^^^
    |
 help: consider specifying that the asm block is responsible for returning from the function
    |
@@ -156,7 +156,7 @@ error[E0787]: asm in naked functions must use `noreturn` option
   --> $DIR/naked-functions.rs:86:5
    |
 LL |     asm!("");
-   |     ^^^^^^^^
+   |     ^^^^^^^^^
    |
 help: consider specifying that the asm block is responsible for returning from the function
    |
@@ -167,7 +167,7 @@ error[E0787]: asm in naked functions must use `noreturn` option
   --> $DIR/naked-functions.rs:88:5
    |
 LL |     asm!("");
-   |     ^^^^^^^^
+   |     ^^^^^^^^^
    |
 help: consider specifying that the asm block is responsible for returning from the function
    |
@@ -181,13 +181,13 @@ LL | pub extern "C" fn too_many_asm_blocks() {
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ...
 LL |     asm!("");
-   |     -------- multiple asm blocks are unsupported in naked functions
+   |     --------- multiple asm blocks are unsupported in naked functions
 LL |
 LL |     asm!("");
-   |     -------- multiple asm blocks are unsupported in naked functions
+   |     --------- multiple asm blocks are unsupported in naked functions
 LL |
 LL |     asm!("", options(noreturn));
-   |     --------------------------- multiple asm blocks are unsupported in naked functions
+   |     ---------------------------- multiple asm blocks are unsupported in naked functions
 
 error: referencing function parameters is not allowed in naked functions
   --> $DIR/naked-functions.rs:97:11
@@ -210,19 +210,19 @@ error[E0787]: asm options unsupported in naked functions: `nomem`, `preserves_fl
   --> $DIR/naked-functions.rs:105:5
    |
 LL |     asm!("", options(nomem, preserves_flags, noreturn));
-   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 error[E0787]: asm options unsupported in naked functions: `nostack`, `pure`, `readonly`
   --> $DIR/naked-functions.rs:111:5
    |
 LL |     asm!("", options(readonly, nostack), options(pure));
-   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 error[E0787]: asm in naked functions must use `noreturn` option
   --> $DIR/naked-functions.rs:111:5
    |
 LL |     asm!("", options(readonly, nostack), options(pure));
-   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |
 help: consider specifying that the asm block is responsible for returning from the function
    |
@@ -233,7 +233,7 @@ error[E0787]: asm options unsupported in naked functions: `may_unwind`
   --> $DIR/naked-functions.rs:119:5
    |
 LL |     asm!("", options(noreturn, may_unwind));
-   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 warning: Rust ABI is unsupported in naked functions
   --> $DIR/naked-functions.rs:124:1

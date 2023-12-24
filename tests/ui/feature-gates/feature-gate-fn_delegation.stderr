@@ -2,7 +2,7 @@ error: expected one of `!` or `::`, found `(`
   --> $DIR/feature-gate-fn_delegation.rs:1:1
    |
 LL | todo!();
-   | ^^^^^^^
+   | ^^^^^^^^
    | |
    | expected one of `!` or `::`
    | in this macro invocation

@@ -2,7 +2,7 @@ error[E0369]: binary operation `==` cannot be applied to type `Vec<Foo>`
   --> $DIR/eq-vec.rs:11:5
    |
 LL |     assert_eq!(vec1, vec2);
-   |     ^^^^^^^^^^^^^^^^^^^^^^
+   |     ^^^^^^^^^^^^^^^^^^^^^^^
    |     |
    |     Vec<Foo>
    |     Vec<Foo>
